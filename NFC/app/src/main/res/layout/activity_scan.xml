@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/trans_gray">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NFC感应中..."
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp"
+        android:textSize="20dp"
+        android:id="@+id/title">
+    </TextView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_app_main"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:id="@+id/imageView2">
+    </ImageView>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/capture"
+        android:id="@+id/imageView">
+    </ImageView>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:src="@drawable/kakalib_scan_ray"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/scan_ray">
+    </ImageView>
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="5dp"
+        android:background="@drawable/scan_line"
+        android:id="@+id/scan_line"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView">
+    </ImageView>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:background="@drawable/kakalib_scan_ray">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/switch_aera">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="打开NFC功能">
+        </TextView>
+        <Button
+            android:id="@+id/switch_button"
+            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_below="@+id/imageView"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="打开设置">
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

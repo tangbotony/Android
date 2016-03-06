@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/white">
+        <tangbo.com.nfc.wiget.CircleImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/icon"
+            android:layout_margin="5dp"
+            app:border_width="1dp"
+            app:border_color="@android:color/darker_gray"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:text="熟悉的陌生人"
+            android:textSize="22dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@android:color/black"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray">
+        </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:id="@+id/list">
+    </ListView>
+
+
+    <ImageView
+        android:id="@+id/key_word"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/wordsthumb_1"
+        android:scaleType="centerCrop">
+    </ImageView>
+</LinearLayout>
