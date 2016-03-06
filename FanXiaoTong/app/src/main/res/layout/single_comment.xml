@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp" >
+
+    <ImageView
+        android:id="@+id/user_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/user_head_img"
+        android:contentDescription="@string/blank"
+        android:src="@drawable/img_box" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/user_head"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/user_head"
+        android:gravity="center"
+        android:text="@string/user_name"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_2" />
+
+    <TextView
+        android:id="@+id/floor"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/user_head"
+        android:layout_toLeftOf="@+id/floor_label"
+        android:gravity="center"
+        android:text="@string/num"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_size_1" />
+
+    <TextView
+        android:id="@+id/floor_label"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/user_head"
+        android:layout_marginLeft="2dp"
+        android:gravity="center"
+        android:text="@string/floor_label"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_size_1" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_name"
+        android:layout_below="@+id/user_name"
+        android:text="@string/default_comment"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_size_1" />
+
+    <TextView
+        android:id="@+id/score_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/comment"
+        android:layout_below="@+id/comment"
+        android:layout_marginTop="7dp"
+        android:text="@string/store_score_name"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_1" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/score_label"
+        android:layout_toRightOf="@+id/score_label"
+        android:layout_marginLeft="5dp"
+        android:text="@string/default_star_num"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_1" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/score_label"
+        android:text="@string/default_date"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_size_1" />
+
+    <ImageView
+        android:id="@+id/dot_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/date"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dotted_line"
+        android:contentDescription="@string/blank"
+        android:layerType="software" />
+
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:background="@drawable/white_round_shape"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <!-- 标题栏（包含关闭按钮） -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp" >
+
+            <TextView
+                android:id="@+id/delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:text="@string/delete_order"
+                android:textColor="@drawable/blue_text_selector"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/confirm_order_information_dialog_title"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_3" />
+
+            <ImageView
+                android:id="@+id/dialog_close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:contentDescription="@string/blank"
+                android:padding="9dp"
+                android:src="@drawable/close_selector" />
+        </RelativeLayout>
+
+        <!-- 菜品详情 -->
+
+        <LinearLayout
+            android:id="@+id/current_food_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/notice"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/text_size_1"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/address_label"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_1" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/default_addr"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/receive_phone_num"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_1" />
+
+            <TextView
+                android:id="@+id/receive_phone_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_phone_num"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/remark"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_1" />
+
+            <TextView
+                android:id="@+id/remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submit_notice_hint"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividing_line"
+            android:contentDescription="@string/blank" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white2gray_bg_selector____"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/confirm"
+            android:textColor="@drawable/blue2blue_text_selector"
+            android:textSize="@dimen/text_size_3" />
+    </LinearLayout>
+
+</LinearLayout>

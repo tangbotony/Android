@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <ScrollView
+        android:id="@+id/order_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:scrollbarStyle="outsideOverlay"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/order_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 空订单 -->
+
+    <LinearLayout
+        android:id="@+id/empty_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/public_desc"
+            android:src="@drawable/order_empty_notice" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:text="@string/empty_order_notice"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_size_1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/unlogin_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/public_desc"
+            android:src="@drawable/unlogin_notice" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:text="@string/unlogin_notice"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_size_1" />
+    </LinearLayout>
+    
+        <!-- 没有网络 -->
+
+    <LinearLayout
+        android:id="@+id/no_network_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/public_desc"
+            android:src="@drawable/no_network_notice" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:text="@string/no_network"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_size_1" />
+    </LinearLayout>
+
+</RelativeLayout>

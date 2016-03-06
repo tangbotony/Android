@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/store_big_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/big_img_loading"
+                    android:contentDescription="@string/blank" />
+
+                <RelativeLayout
+                    android:id="@+id/simple_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/store_big_img"
+                    android:background="@color/light_gray"
+                    android:padding="7dp" >
+
+                    <TextView
+                        android:id="@+id/food_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/food_name"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_3"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/can_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/food_name"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/food_name"
+                        android:clickable="true"
+                        android:text="@string/can_order"
+                        android:textColor="@color/holo_blue"
+                        android:textSize="@dimen/text_size_0" />
+
+                    <ImageView
+                        android:id="@+id/collect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/can_order"
+                        android:clickable="true"
+                        android:contentDescription="@string/blank"
+                        android:paddingLeft="14dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/heart_normal" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/store_logo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignBottom="@+id/simple_info"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="23dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@android:color/white"
+                    android:contentDescription="@string/blank"
+                    android:padding="3dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/big_img_loading" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/food_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray_"
+                    android:contentDescription="@string/blank" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/food_score_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="7dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="7dp"
+                            android:text="@string/store_score_name" />
+
+                        <TextView
+                            android:id="@+id/food_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/food_score_label"
+                            android:paddingBottom="7dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="7dp"
+                            android:text="@string/default_star_num" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/line"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/week_sale_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="7dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="7dp"
+                            android:text="@string/month_saled_label" />
+
+                        <TextView
+                            android:id="@+id/week_sale_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/week_sale_label"
+                            android:paddingBottom="7dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="7dp"
+                            android:text="@string/default_sales_volume" />
+
+                        <TextView
+                            android:id="@+id/week_sale_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/week_sale_num"
+                            android:paddingBottom="7dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="7dp"
+                            android:text="@string/food_count_unit" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/comment_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="7dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="7dp"
+                            android:text="@string/evaluate" />
+
+                        <TextView
+                            android:id="@+id/comment_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/comment_num"
+                            android:paddingBottom="7dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="7dp"
+                            android:text="@string/comment_unit" />
+
+                        <TextView
+                            android:id="@+id/comment_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/comment_label"
+                            android:paddingBottom="7dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="7dp"
+                            android:text="@string/default_comments_num" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/jardiniere_label"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/food_jardiniere"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/jardiniere"
+                            android:textColor="@color/light_black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/flavor_label"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/food_flavor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/default_flavor"
+                            android:textColor="@color/light_black" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/dotted_line"
+                    android:contentDescription="@string/blank"
+                    android:layerType="software" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/annoucement_label"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/annoucement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/loading"
+                        android:textColor="@color/light_black" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/show_comment_btn"
+                    android:layout_width="135dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/show_comment_btn_selector"
+                    android:text="@string/show_comment"
+                    android:textColor="@drawable/show_comment_text_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/show_comment_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dividing_line"
+                    android:contentDescription="@string/blank" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableBottom="@drawable/down_arrow"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/evaluate_detail_food"
+                    android:textColor="@color/dividing_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/comment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/more_comment_btn"
+                android:layout_width="135dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:background="@drawable/show_comment_btn_selector"
+                android:text="@string/more_comment"
+                android:textColor="@drawable/show_comment_text_selector"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/tab_bottom"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" >
+
+            <RelativeLayout
+                android:id="@+id/single_cost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/tab_bottom"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/rmb_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/blank"
+                    android:src="@drawable/money" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/rmb_icon"
+                    android:layout_marginLeft="22dp"
+                    android:layout_toRightOf="@+id/rmb_icon"
+                    android:includeFontPadding="false"
+                    android:text="@string/default_sales_volume"
+                    android:textColor="@color/num_red"
+                    android:textSize="@dimen/text_size_4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/price"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/price"
+                    android:text="@string/rmb_label"
+                    android:textColor="@color/num_red" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/enter_cart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gray2gray_bg_selector_"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/enter_cart"
+                    android:textColor="@color/holo_blue_"
+                    android:textSize="@dimen/text_size_3" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/add_cart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/add_cart_selector"
+            android:drawableTop="@drawable/add_cart"
+            android:enabled="false"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/add_cart"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_0" />
+    </LinearLayout>
+
+</RelativeLayout>

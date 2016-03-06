@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="auto_play" forMymat="boolean" />
+
+    <declare-styleable name="SSw">
+        <attr name="auto_play" />
+    </declare-styleable>
+    
+    <declare-styleable name="MC">
+        <attr name="Text" format="reference|string" />
+        <attr name="Oriental">
+            <enum name="Horizontal" value="1"></enum>
+            <enum name="Vertical" value="0"></enum>
+        </attr>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <RelativeLayout
+        android:id="@+id/head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/actionbar_color"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <RelativeLayout
+            android:id="@+id/login_btn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/login_ico"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/blank"
+                android:padding="9dp"
+                android:src="@drawable/unlogin_selector" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/menu_btn"
+            android:layout_toRightOf="@+id/login_btn"
+            android:background="@drawable/input_shape"
+            android:padding="3dp"
+            android:visibility="visible" >
+
+            <EditText
+                android:id="@+id/search_input"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/search_btn"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/search_input_hint"
+                android:maxLength="15"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_1" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/search_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:contentDescription="@string/blank"
+                android:padding="3dp"
+                android:src="@drawable/search_selector" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:text="@string/app_name"
+            android:textSize="@dimen/text_size_3"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/menu_btn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:contentDescription="@string/blank"
+            android:padding="12dp"
+            android:src="@drawable/options_selector" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/dividing_line"
+            android:contentDescription="@string/blank" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabs"
+        android:layout_below="@+id/head_layout" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividing_line"
+            android:contentDescription="@string/blank" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/holo_gray"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/recom_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/hot_selector"
+                android:clickable="true"
+                android:contentDescription="@string/blank" />
+
+            <ImageView
+                android:id="@+id/store_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/stores_selector"
+                android:clickable="true"
+                android:contentDescription="@string/blank" />
+
+            <ImageView
+                android:id="@+id/cart_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/cart_selector"
+                android:clickable="true"
+                android:contentDescription="@string/blank" />
+
+            <ImageView
+                android:id="@+id/order_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/orders_selector"
+                android:clickable="true"
+                android:contentDescription="@string/blank" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

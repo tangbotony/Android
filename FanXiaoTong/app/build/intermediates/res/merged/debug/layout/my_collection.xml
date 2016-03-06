@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/actionbar_color" >
+
+        <TextView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/white2gray_bg_selector"
+            android:clickable="true"
+            android:drawableLeft="@drawable/back_btn_selector"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="@string/collection_back_text"
+            android:textColor="@drawable/blue2blue_text_selector"
+            android:textSize="@dimen/text_size_2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/my_collect"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_3" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/dividing_line"
+            android:contentDescription="@string/blank" />
+    </RelativeLayout>
+
+    <com.fanxiaotong.client.widget.Se
+        android:id="@+id/segment_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:checkedButton="@+id/button_left"
+        android:gravity="top|center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@id/button_left"
+            android:layout_width="90dp"
+            android:layout_height="36dp"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/food_tip"
+            android:textColor="@drawable/radio_text_selector" />
+
+        <RadioButton
+            android:id="@+id/button_right"
+            android:layout_width="90dp"
+            android:layout_height="36dp"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="3dp"
+            
+            android:text="@string/store_collect"
+            android:textColor="@drawable/radio_text_selector" />
+    </com.fanxiaotong.client.widget.Se>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/collection_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

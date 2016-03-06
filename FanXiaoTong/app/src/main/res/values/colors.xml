@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#0066FF</color>
+    <color name="no_color">#00000000</color>
+    <color name="bg_color">#F4F3F3</color>
+    <color name="bg_color_deep">#E5E5E5</color>
+    <color name="black">#000000</color>
+    <color name="text_color">#434343</color>
+    <color name="black_half">#50000000</color>
+    <color name="topbar_color">#f05656</color>
+    <color name="orange_red">#d45206</color>
+    <color name="light_gray">#f0f0f0</color>
+    <color name="light_pink">#f05656</color>
+    <color name="dark_pink">#ab2323</color>
+    <color name="announcement_color">#e2e2e2</color>
+    <color name="transparent_dark">#78000000</color>
+    <color name="transparent_gray">#10000000</color>
+    <color name="transparent_white">#ccffffff</color>
+    <color name="holo_gray">#f5f5f5</color>
+    <color name="little_gray">#fefefe</color>
+    <color name="date_color">#dadada</color>
+    <color name="text_red">#FA284D</color>
+    <color name="num_red">#f94141</color>
+    <color name="signal_gray">#cccccc</color>
+    <color name="bg_gray">#ebebeb</color>
+    <color name="dark_green">#0083A0</color>
+    <color name="bright_blue">#00ddee</color>
+    <color name="text_gray">#bfbfbf</color>
+    <color name="line">#d3d3ac</color>
+
+    <!-- 个人信息界面 -->
+    <color name="top_bg">#897A67</color>
+    <color name="collect_store_button_bg">#9C8E7C</color>
+    <color name="collect_food_button_bg">#877A6A</color>
+    <color name="all_collect_button_bg">#74695B</color>
+    <color name="collect_change_button_bg">#585848</color>
+    <color name="item_bg">#0079fb</color>
+    <color name="personal_line">#D1D1D1</color>
+    <color name="word_color">#8FE451</color>
+
+    <!-- 附近餐馆 -->
+    <color name="store_line">#63a219</color>
+    <color name="text_color2">#B3B3B3</color>
+
+    <!-- recom -->
+    <color name="actionbar_color">#ffffff</color>
+    <color name="input_border">#929277</color>
+    <color name="dividing_line">#e1e1e1</color>
+
+    <!-- #cdd4b -->
+    <color name="normal_bg">#ffffff</color>
+    <color name="dish_normal">#202020</color>
+    <color name="dish_actived">#fe7829</color>
+    <color name="tab_top">#fafafa</color>
+    <color name="tab_bottom">#f9f9f9</color>
+    <color name="red">#ff0000</color>
+
+    <!-- cart -->
+    <color name="world_color">#ABABAB</color>
+
+    <!-- food detail information -->
+
+    <color name="light_blue">#45c6ff</color>
+    <color name="holo_blue">#35b6f6</color>
+    <color name="holo_blue_">#2fa1da</color>
+    <color name="little_blue">#77ddff</color>
+    <color name="little_blue_">#67cdef</color>
+    <color name="holo_red">#fa153e</color>
+    <color name="hint_gray">#c3c39f</color>
+    <color name="light_gray_">#eaeaea</color>
+    <color name="light_gray__">#dddddd</color>
+    <color name="dark_green_">#55A146</color>
+    <color name="translate_blue">#ab35b6f6</color>
+    <color name="translate_blue_">#cd35b6f6</color>
+    <color name="translate_blue__">#35b6f6</color>
+    <color name="translate_gray">#bbbbbbbb</color>
+    <color name="translate_gray_">#ddbbbbbb</color>
+
+    <!-- 状态字体 -->
+    <color name="refuse">#fa153e</color>
+    <color name="waiting">#ababab</color>
+    <color name="cooking">#1abd53</color>
+    <color name="send">#ff9627</color>
+    <color name="finish">#3598db</color>
+    <color name="light_black">#787878</color>
+
+    <!--  -->
+    <color name="btn_gray">#787878</color>
+
+    <!-- left.xml -->
+    <color name="dark_blue">#242B35</color>
+    <color name="dark_blue_">#141B25</color>
+    <color name="dark_holo_blue">#415574</color>
+    <color name="dark_btn_blue">#466576</color>
+    <color name="dark_btn_blue_">#365566</color>
+
+</resources>

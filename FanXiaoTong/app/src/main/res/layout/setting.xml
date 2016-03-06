@@ -1,0 +1,251 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:keepScreenOn="true"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/page_head"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/actionbar_color" >
+
+        <TextView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:background="@drawable/white2gray_bg_selector"
+            android:drawableLeft="@drawable/back_btn_selector"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="@string/back_home_text"
+            android:textColor="@drawable/blue2blue_text_selector"
+            android:textSize="@dimen/text_size_2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/setting_page_title"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_3" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/dividing_line"
+            android:contentDescription="@string/blank" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/page_head"
+        android:background="@color/light_gray"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/single_order_for_send_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/white2gray_bg_selector__"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="@string/clear_cache" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/order_state_setting" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_right_angle_bg_shape"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/cookingConter"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/white2gray_bg_selector___"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/cooking" />
+
+                    <TextView
+                        android:id="@+id/cooking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:textColor="@color/light_black" >
+                    </TextView>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/light_gray_" />
+
+                <RelativeLayout
+                    android:id="@+id/sendConter"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/white2gray_bg_selector___"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/sending" />
+
+                    <TextView
+                        android:id="@+id/send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:textColor="@color/light_black" >
+                    </TextView>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/light_gray_" />
+
+                <RelativeLayout
+                    android:id="@+id/refuseConter"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/white2gray_bg_selector___"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/refuse" />
+
+                    <TextView
+                        android:id="@+id/refuse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:textColor="@color/light_black" >
+                    </TextView>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/light_gray_" />
+
+                <RelativeLayout
+                    android:id="@+id/overtimeConter"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/white2gray_bg_selector___"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/overtime" />
+
+                    <TextView
+                        android:id="@+id/overtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:textColor="@color/light_black" >
+                    </TextView>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/light_gray_" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/open_cloe_notification_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="@string/open_cloe_notification" />
+
+                    <ToggleButton
+                        android:id="@+id/open_close_notification"
+                        android:layout_width="42dp"
+                        android:layout_height="21dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/toggle_btn_selector"
+                        android:textOff=""
+                        android:textOn="" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

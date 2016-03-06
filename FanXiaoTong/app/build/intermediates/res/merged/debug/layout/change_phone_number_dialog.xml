@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:background="@drawable/white_round_shape"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <!-- 标题栏（包含关闭按钮） -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp" >
+
+            <TextView
+                android:id="@+id/delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:text="@string/delete_order"
+                android:textColor="@drawable/blue_text_selector"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/change_phone_number_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/change_phone_number_dialog_title"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_3" />
+
+            <ImageView
+                android:id="@+id/dialog_close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:contentDescription="@string/blank"
+                android:padding="7dp"
+                android:src="@drawable/close_selector" />
+        </RelativeLayout>
+
+        <!-- 菜品详情 -->
+
+        <LinearLayout
+            android:id="@+id/current_food_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp" >
+
+            <EditText
+                android:id="@+id/new_phone_input"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/dialog_input_selector"
+                android:hint="@string/change_phone_number_default_content"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColorHint="@color/hint_gray"
+                android:textSize="@dimen/text_size_2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp" >
+
+            <EditText
+                android:id="@+id/verification_filed"
+                android:layout_width="110dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/dialog_input_selector"
+                android:gravity="center"
+                android:hint="@string/verification_filed_hint"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textColorHint="@color/hint_gray"
+                android:textSize="@dimen/text_size_2" />
+
+            <TextView
+                android:id="@+id/verification_label"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:text="@string/verification_label"
+                android:textColor="@drawable/blue_text_selector"
+                android:textSize="@dimen/text_size_1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividing_line"
+            android:contentDescription="@string/blank" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/modify_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white2gray_bg_selector____"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/modify_order"
+            android:textColor="@drawable/blue2blue_text_selector"
+            android:textSize="@dimen/text_size_3" />
+    </LinearLayout>
+
+</LinearLayout>

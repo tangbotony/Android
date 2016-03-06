@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:background="@drawable/white_round_shape"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <!-- 标题栏（包含关闭按钮） -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp" >
+
+            <TextView
+                android:id="@+id/delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:text="@string/delete_order"
+                android:textColor="@drawable/blue_text_selector"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/food_name_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/food_name"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_3"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/buy_food_dialog_close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:contentDescription="@string/blank"
+                android:src="@drawable/close_selector" />
+        </RelativeLayout>
+
+        <!-- 菜品详情 -->
+
+        <LinearLayout
+            android:id="@+id/current_food_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/flavor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/food_flavor_label"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/jardiniere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/jardiniere_label"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/notice_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/remark"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/remark_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/input_shape"
+                android:hint="@string/notice_filed_hint"
+                android:maxLength="30"
+                android:maxLines="5"
+                android:padding="8dp"
+                android:textColorHint="@color/hint_gray"
+                android:textSize="@dimen/text_size_1" />
+
+            <RelativeLayout
+                android:id="@+id/food_num_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp" >
+
+                <TextView
+                    android:id="@+id/food_num_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/food_num_label"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/reduce_food_num_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/food_num_label"
+                    android:clickable="true"
+                    android:contentDescription="@string/blank"
+                    android:src="@drawable/reduce_selector" />
+
+                <TextView
+                    android:id="@+id/food_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/reduce_food_num_btn"
+                    android:text="@string/default_sales_volume"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_4" />
+
+                <ImageView
+                    android:id="@+id/increase_food_num_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/food_num"
+                    android:clickable="true"
+                    android:contentDescription="@string/blank"
+                    android:src="@drawable/plus_selector" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/food_cost_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/food_cost_label"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/food_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/food_cost_label"
+                    android:layout_marginRight="2dp"
+                    android:layout_toRightOf="@+id/food_cost_label"
+                    android:text="@string/default_star_num"
+                    android:textColor="@color/num_red"
+                    android:textSize="@dimen/text_size_4" />
+
+                <TextView
+                    android:id="@+id/food_cost_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/food_cost"
+                    android:layout_toRightOf="@+id/food_cost"
+                    android:text="@string/food_cost_unit"
+                    android:textColor="@color/num_red" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividing_line"
+            android:contentDescription="@string/blank" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white2gray_bg_selector____"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/submit"
+            android:textColor="@drawable/blue2blue_text_selector"
+            android:textSize="@dimen/text_size_3" />
+    </LinearLayout>
+
+</LinearLayout>

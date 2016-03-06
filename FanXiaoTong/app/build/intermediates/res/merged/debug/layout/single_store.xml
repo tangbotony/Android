@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/single_store_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/single_store_selector"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <!--  -->
+
+        <ImageView
+            android:id="@+id/store_logo"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/big_img_loading"
+            android:contentDescription="@string/public_desc" />
+
+        <ImageView
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/white_angle_bg_shape"
+            android:contentDescription="@string/public_desc" />
+
+        <TextView
+            android:id="@+id/store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/store_logo"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/store_logo"
+            android:text="@string/default_store_name"
+            android:textSize="@dimen/text_size_3" />
+
+        <ImageView
+            android:id="@+id/store_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/store_name"
+            android:layout_below="@+id/store_name"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/public_desc"
+            android:src="@drawable/stars" />
+
+        <TextView
+            android:id="@+id/store_score_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/store_name"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/store_score"
+            android:text="@string/default_star_num"
+            android:textSize="@dimen/text_size_1" />
+
+        <TextView
+            android:id="@+id/main_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/store_score"
+            android:layout_below="@+id/store_score"
+            android:layout_marginTop="8dp"
+            android:text="@string/default_main_food"
+            android:textSize="@dimen/text_size_0" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/arrow"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/sales_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_sales_volume"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="@string/default_sales_volume_name"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size_0" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:contentDescription="@string/public_desc"
+            android:src="@drawable/arrow" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/dotted_line_2"
+        android:layerType="software" />
+
+</LinearLayout>

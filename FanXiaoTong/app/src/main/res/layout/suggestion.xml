@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:keepScreenOn="true"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/page_head"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/actionbar_color" >
+
+        <TextView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/white2gray_bg_selector"
+            android:clickable="true"
+            android:drawableLeft="@drawable/back_btn_selector"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="@string/back_home_text"
+            android:textColor="@drawable/blue2blue_text_selector"
+            android:textSize="@dimen/text_size_2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="@string/suggestion_label"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_3" />
+
+        <TextView
+            android:id="@+id/send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/white2gray_bg_selector"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="@string/send_feedback"
+            android:textColor="@drawable/blue2blue_text_selector"
+            android:textSize="@dimen/text_size_2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/dividing_line"
+            android:contentDescription="@string/blank" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/page_head"
+        android:background="@color/light_gray"
+        android:scrollbarStyle="outsideOverlay" >
+
+        <LinearLayout
+            android:id="@+id/single_order_for_send_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <EditText
+                android:id="@+id/feedback_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_right_angle_bg_shape"
+                android:gravity="start"
+                android:hint="@string/feedback_input_hint"
+                android:maxHeight="300dp"
+                android:minHeight="180dp"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/feedback_tip"
+                android:textColor="@color/light_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/email_label"
+                android:textColor="@color/light_black" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_right_angle_bg_shape"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/old_feedback"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/no_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/no_feedback"
+                android:textColor="@color/light_black" />
+
+            <LinearLayout
+                android:id="@+id/feedback_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_right_angle_bg_shape"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

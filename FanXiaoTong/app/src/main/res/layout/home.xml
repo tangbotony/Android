@@ -1,0 +1,926 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    tools:ignore="TooManyViews" >
+
+    <com.fanxiaotong.client.widget.Re
+        android:id="@+id/refresh_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/scro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/mimage_switcher_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/dividing_line"
+                    android:contentDescription="@string/blank" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/recom_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/competitive"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/boutique"
+                            android:contentDescription="@string/public_desc" />
+
+                        <ImageView
+                            android:layout_width="74dp"
+                            android:layout_height="74dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/recommend_selector"
+                            android:contentDescription="@string/public_desc" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/competitive"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/competitive" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/recom_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/recommend_1"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/download"
+                            android:contentDescription="@string/public_desc" />
+
+                        <ImageView
+                            android:layout_width="74dp"
+                            android:layout_height="74dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/recommend_selector"
+                            android:contentDescription="@string/public_desc" />
+
+                        <TextView
+                            android:id="@+id/recommend_1_lable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/recommend_1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/competitive" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/recom_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/recommend_2"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/download"
+                            android:contentDescription="@string/public_desc" />
+
+                        <ImageView
+                            android:layout_width="74dp"
+                            android:layout_height="74dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/recommend_selector"
+                            android:contentDescription="@string/public_desc" />
+
+                        <TextView
+                            android:id="@+id/recommend_2_lable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/recommend_2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/competitive" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="23dp" >
+
+                    <LinearLayout
+                        android:id="@+id/dish_kind_container1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/dish_kind_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:text="@string/dish"
+                                android:textColor="@drawable/dish_selector" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/dish_kind_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:text="@string/dish"
+                                android:textColor="@drawable/dish_selector" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/dish_kind_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:text="@string/dish"
+                                android:textColor="@drawable/dish_selector" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/dish_kind_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:text="@string/dish"
+                                android:textColor="@drawable/dish_selector" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dish_kind_container2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/dish_kind_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:text="@string/dish"
+                                android:textColor="@drawable/dish_selector" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/dish_kind_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:text="@string/dish"
+                                android:textColor="@drawable/dish_selector" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/dish_kind_7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:text="@string/dish"
+                                android:textColor="@drawable/dish_selector" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/dish_kind_8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="@string/dish"
+                                android:textColor="@drawable/dish_selector" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/dotted_line"
+                    android:contentDescription="@string/blank"
+                    android:layerType="software" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/hot_shop" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/dividing_line"
+                        android:contentDescription="@string/blank" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/shop_1"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:clickable="true"
+                            android:contentDescription="@string/blank"
+                            android:padding="5dp" />
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/white_angle_bg_shape"
+                            android:contentDescription="@string/blank"
+                            android:padding="5dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/shop_1"
+                            android:orientation="vertical"
+                            android:padding="10dp" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/shop_1_dish_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_1_dish_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_1_dish_3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/shop_1_dish_4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_1_dish_5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_1_dish_6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/shop_1_dish_7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_1_dish_8"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <RelativeLayout
+                                    android:id="@+id/shop_1_dish_9"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:gravity="center_horizontal"
+                                    android:padding="5dp"
+                                    android:visibility="invisible" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/logout_btn_selector"
+                                        android:maxEms="5"
+                                        android:paddingLeft="3dp"
+                                        android:paddingRight="3dp"
+                                        android:singleLine="true"
+                                        android:text="@string/more_food"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size_0" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/dividing_line"
+                        android:contentDescription="@string/blank" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/dividing_line"
+                        android:contentDescription="@string/blank" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/shop_2"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:clickable="true"
+                            android:contentDescription="@string/blank"
+                            android:padding="5dp" />
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/white_angle_bg_shape"
+                            android:contentDescription="@string/blank"
+                            android:padding="5dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/shop_2"
+                            android:orientation="vertical"
+                            android:padding="10dp" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/shop_2_dish_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_2_dish_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_2_dish_3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/shop_2_dish_4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_2_dish_5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_2_dish_6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/shop_2_dish_7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_2_dish_8"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <RelativeLayout
+                                    android:id="@+id/shop_2_dish_9"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:gravity="center_horizontal"
+                                    android:padding="5dp"
+                                    android:visibility="invisible" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/logout_btn_selector"
+                                        android:maxEms="5"
+                                        android:paddingLeft="3dp"
+                                        android:paddingRight="3dp"
+                                        android:singleLine="true"
+                                        android:text="@string/more_food"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size_0" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/dividing_line"
+                        android:contentDescription="@string/blank" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/dividing_line"
+                        android:contentDescription="@string/blank" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/shop_3"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:clickable="true"
+                            android:contentDescription="@string/blank"
+                            android:padding="5dp" />
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/white_angle_bg_shape"
+                            android:contentDescription="@string/blank"
+                            android:padding="5dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/shop_3"
+                            android:orientation="vertical"
+                            android:padding="10dp" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/shop_3_dish_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_3_dish_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_3_dish_3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/shop_3_dish_4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_3_dish_5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_3_dish_6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/shop_3_dish_7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <TextView
+                                    android:id="@+id/shop_3_dish_8"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:maxEms="5"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:text="@string/dish"
+                                    android:textColor="@drawable/dish_selector" />
+
+                                <RelativeLayout
+                                    android:id="@+id/shop_3_dish_9"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:gravity="center_horizontal"
+                                    android:padding="5dp"
+                                    android:visibility="invisible" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/logout_btn_selector"
+                                        android:maxEms="5"
+                                        android:paddingLeft="3dp"
+                                        android:paddingRight="3dp"
+                                        android:singleLine="true"
+                                        android:text="@string/more_food"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size_0" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/dividing_line"
+                        android:contentDescription="@string/blank" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.fanxiaotong.client.widget.Re>
+
+    <!-- 没有网络 -->
+
+    <LinearLayout
+        android:id="@+id/no_network_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/public_desc"
+            android:src="@drawable/no_network_notice" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:text="@string/no_network"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_size_1" />
+    </LinearLayout>
+
+</RelativeLayout>

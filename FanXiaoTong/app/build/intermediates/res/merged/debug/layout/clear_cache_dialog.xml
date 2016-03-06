@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    android:background="@drawable/white_round_bg_shape"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <!-- 标题栏（包含关闭按钮） -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_centerVertical="true"
+                android:text="@string/clear_cache"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_3" />
+
+            <ImageView
+                android:id="@+id/close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:contentDescription="@string/blank"
+                android:src="@drawable/close_selector" />
+        </RelativeLayout>
+
+        <!-- 菜品详情 -->
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/clrar_cache_content"
+            android:textColor="@color/light_black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividing_line"
+            android:contentDescription="@string/blank" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <TextView
+                android:id="@+id/give_up_button"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/dividing_bar"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/give_up"
+                android:background="@drawable/left_white2gay_btn_selector"
+                android:textColor="@drawable/blue2blue_text_selector"
+                android:textSize="@dimen/text_size_3" />
+
+            <TextView
+                android:id="@+id/dividing_bar"
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@color/dividing_line" />
+
+            <TextView
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/dividing_bar"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:background="@drawable/right_white2gay_btn_selector"
+                android:text="@string/clear_bt"
+                android:textColor="@drawable/blue2blue_text_selector"
+                android:textSize="@dimen/text_size_3" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/single_store_food_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/white2gray_bg_selector__"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_weight="618"
+        android:padding="1dp" >
+
+        <ImageView
+            android:id="@+id/food_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/big_img_loading"
+            android:contentDescription="@string/public_desc" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/food_info_layout"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_weight="382"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/food_name"
+            android:textSize="@dimen/text_size_2" />
+
+        <ImageView
+            android:id="@+id/signal_food_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/food_name"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/dividing_line"
+            android:contentDescription="@string/blank" />
+
+        <RelativeLayout
+            android:id="@+id/stars_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signal_food_line"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp" >
+
+            <ImageView
+                android:id="@+id/stars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/public_desc"
+                android:src="@drawable/stars" />
+
+            <TextView
+                android:id="@+id/stars_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/stars"
+                android:text="@string/default_star_num"
+                android:textColor="@color/text_color2"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sale_price_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/saled_count_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp" >
+
+            <TextView
+                android:id="@+id/food_price_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/food_price"
+                android:text="@string/unit"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/text_size_0" />
+
+            <TextView
+                android:id="@+id/food_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/food_price_label"
+                android:text="@string/default_month_sale_num"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/text_size_4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/food_price"
+                android:layout_toRightOf="@+id/food_price"
+                android:text="@string/month_sale_icon_label"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/text_size_1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/saled_count_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/month_saled_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="@string/month_saled_label"
+                android:textColor="@color/text_color2"
+                android:textSize="@dimen/text_size_0" />
+
+            <TextView
+                android:id="@+id/month_saled_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/month_saled_label"
+                android:layout_toRightOf="@+id/month_saled_label"
+                android:text="@string/default_month_sale_num"
+                android:textColor="@color/text_color2"
+                android:textSize="@dimen/text_size_0" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

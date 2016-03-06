@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fanxiaotong.client"
+    android:installLocation="auto"
+    android:versionCode="2"
+    android:versionName="v2.0.391125" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 文件夹操作权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 文件读写操作 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 拨打电话的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- QQ互联 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 唤醒屏幕的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.fanxiaotong.client.activity.Sp"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fanxiaotong.client.activity.Sl"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.D" >
+        </activity>
+        <activity
+            android:name="com.fanxiaotong.client.activity.St"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.L" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.Re" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.PersonalInfoSettingActivity" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.S" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.H" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.Sug" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.G" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.M" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.F" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.Su" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.A" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.Fo" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.C" >
+        </activity>
+        <activity android:name="com.fanxiaotong.client.activity.Sh" >
+        </activity>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="101006494" /> <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

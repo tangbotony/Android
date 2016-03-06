@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:background="@color/tab_bottom"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/address_label"
+            android:textColor="@color/dark_green"
+            android:textSize="@dimen/text_size_1" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/address_label"
+            android:layout_toRightOf="@+id/address_label"
+            android:text="@string/default_posotion"
+            android:textColor="@color/dark_green"
+            android:textSize="@dimen/text_size_1" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/remark_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remark"
+                android:textColor="@color/dark_green"
+                android:textSize="@dimen/text_size_1" />
+
+            <TextView
+                android:id="@+id/remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/remark_label"
+                android:layout_toRightOf="@+id/remark_label"
+                android:text="@string/default_notice"
+                android:textColor="@color/dark_green"
+                android:textSize="@dimen/text_size_1" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/order_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/time"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/text_size_1" />
+    </LinearLayout>
+
+</LinearLayout>

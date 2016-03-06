@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue" >
+
+    <LinearLayout
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/dark_blue_bg_selector"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/setting_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:contentDescription="@string/blank"
+                android:padding="13dp"
+                android:src="@drawable/setting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/setting_icon"
+                android:gravity="center"
+                android:text="@string/setting_page_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/dark_blue_bg_selector"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/update_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:contentDescription="@string/blank"
+                android:padding="13dp"
+                android:src="@drawable/update" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/update_icon"
+                android:gravity="center"
+                android:text="@string/update"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/share"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/dark_blue_bg_selector"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/share_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:contentDescription="@string/blank"
+                android:padding="13dp"
+                android:src="@drawable/share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/share_icon"
+                android:gravity="center"
+                android:text="@string/share"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/dark_blue_bg_selector"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/suggestion_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:contentDescription="@string/blank"
+                android:padding="13dp"
+                android:src="@drawable/suggestion" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/suggestion_icon"
+                android:gravity="center"
+                android:text="@string/suggestion"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/dark_blue_bg_selector"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/about_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:contentDescription="@string/blank"
+                android:padding="13dp"
+                android:src="@drawable/team" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/about_icon"
+                android:gravity="center"
+                android:text="@string/about"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_2" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/more"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/dark_blue_bg_selector"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/more_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:contentDescription="@string/blank"
+                android:padding="13dp"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/more_icon"
+                android:gravity="center"
+                android:text="@string/more"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/quit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/dark_blue_bg_selector"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/quit_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:contentDescription="@string/blank"
+                android:padding="13dp"
+                android:src="@drawable/quit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/quit_icon"
+                android:gravity="center"
+                android:text="@string/quit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_2" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

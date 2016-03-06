@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/food_order_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- 未登录 -->
+
+    <LinearLayout
+        android:id="@+id/unlogin_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/public_desc"
+            android:src="@drawable/unlogin_notice" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:text="@string/unlogin_notice"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_size_1" />
+    </LinearLayout>
+
+    <!-- 空购物车 -->
+
+    <LinearLayout
+        android:id="@+id/empty_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/public_desc"
+            android:src="@drawable/cart_empty_notice" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:text="@string/empty_cart_notice"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_size_1" />
+    </LinearLayout>
+
+    <!-- 结算按钮 -->
+
+    <RelativeLayout
+        android:id="@+id/submit_cost"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="100dp"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/half_circle"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/submit_order_selector"
+            android:contentDescription="@string/blank" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/half_circle"
+            android:background="@drawable/submit_r_order_selector"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gong"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_3" />
+
+            <TextView
+                android:id="@+id/total_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:text="@string/num"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/feng_fan"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_3" />
+
+            <TextView
+                android:id="@+id/total_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_star_num"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_3" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

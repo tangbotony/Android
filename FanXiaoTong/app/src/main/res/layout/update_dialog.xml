@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:background="@drawable/white_round_bg_shape"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <!-- 标题栏（包含关闭按钮） -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/find_new_version"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_3" />
+
+            <ImageView
+                android:id="@+id/close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:contentDescription="@string/blank"
+                android:src="@drawable/close_selector" />
+        </RelativeLayout>
+
+        <!-- 菜品详情 -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/version_name"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/version_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/light_gray_" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/publish_date"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/publish_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/light_gray_" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/content"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/describe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_black" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividing_line"
+            android:contentDescription="@string/blank" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp" >
+
+            <TextView
+                android:id="@+id/cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/dividing_bar"
+                android:background="@drawable/left_white2gay_btn_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@drawable/blue2blue_text_selector"
+                android:textSize="@dimen/text_size_3" />
+
+            <TextView
+                android:id="@+id/dividing_bar"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:background="@color/dividing_line" />
+
+            <TextView
+                android:id="@+id/submit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/dividing_bar"
+                android:background="@drawable/right_white2gay_btn_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/download"
+                android:textColor="@drawable/blue2blue_text_selector"
+                android:textSize="@dimen/text_size_3" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
